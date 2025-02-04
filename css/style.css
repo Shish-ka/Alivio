@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Georgia;
+    src: url(../fonts/georgia.ttf);
+}
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato-Light.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato-Regular.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato-Black.ttf);
+    font-weight: 900;
+}
+:root {
+    --color-green: #01996D;
+    --color-darkgreen: #245852;
+    --color-wight: #fff;
+    --color-black: #000;
+    --font-lato: Lato;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+ul {
+    list-style: none;
+}
+header {
+    font-family: var(--font-lato);
+    height: 85px;
+    padding: 0 14%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    align-items: center;
+}
+header>a {
+    color: var(--color-green);
+    font-weight: 700;
+    font-size: 120%;
+}
+header ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+header div {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+}
+.button {
+    color: var(--color-wight);
+    background-color: var(--color-green);
+    padding: 13px 50px;
+    border-radius: 10px;
+}
+@media screen and (max-width: 1400px){
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 20px;
+    }
+    header div {
+        justify-self: center;
+    }
+}
+@media screen and (max-width: 600px){
+    header {
+        padding: 0;
+    }
+    header ul {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        column-gap: 10px;
+    }
+}
